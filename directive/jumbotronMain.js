@@ -9,9 +9,10 @@ app.directive('navMain', function() {
     links: '@bsLinks',
   },
   link: function(scope, element, attrs) {
+    console.log('links');
     scope.lorem = function(size){ loremIpsum.getSize(size); }
   },
-  templateUrl: 'templates/nav-main.html'
+  templateUrl: 'templates/navigation/nav-main.html'
   };
 });
 
@@ -24,6 +25,7 @@ app.directive('jumbotronMain', function() {
     toggle: '@bsToggle'
   },
   link: function(scope, element, attrs) {
+
     scope.random = function(min, max) { return Math.floor(Math.random() * (max - min + 1)) + min; }
     scope.toggleBtn = scope.toggle;
     scope.header = scope.random(6,15);
@@ -46,7 +48,7 @@ app.directive('cardsRow', function() {
   link: function(scope, element, attrs) {
 
     scope.cards = new Array(parseInt(attrs.maxsize));
-    scope.random = function(min, max) { return Math.floor(Math.random() * (max - min +1 )) + min; }
+    scope.random = function(min, max) { return Math.floor(Math.random() * (max - min + 1 )) + min; }
     let width = 12 / parseInt(attrs.maxsize);
 
     scope.width = function(){return "col-sm-"+ width;}
@@ -390,16 +392,15 @@ app.directive('checkers', ['loremIpsum', 'randomNumber', function(loremIpsum, ra
         scope.word = loremIpsum.word;
         scope.random = randomNumber.get;
 
-        scope.icons = [
+        const icons = [
           'rocket', 'subway', 'bus', 'refresh', 'font-awesome','heartbeat','git','dot-circle-o',
           'spinner', 'tty', 'universal-access', 'tasks', 'snowflake-o', 'shopping-bag', 'shopping-cart',
           'shopping-basket', 'star-half-full', 'support'
         ];
 
-        scope.pickIcon = function(icon){
-          console.log(icon);
-          return 'fa-'+ scope.icons[icon];
-
+        scope.pickIcon = function(){
+          let icon = scope.random(0, icons.length);
+          return 'fa-'+ icons[icon];
         }
 
 
@@ -407,4 +408,26 @@ app.directive('checkers', ['loremIpsum', 'randomNumber', function(loremIpsum, ra
       },
       templateUrl: 'templates/checkers.html'
     }
+}]);
+
+app.directive('imageTiles', ['loremIpsum', 'randomNumber', function(loremIpsum, randomNumber){
+  return{
+    restrict: 'E',
+    scope:{},
+    link: function(scope, element, attrs){
+
+    },
+    templateUrl: 'templates/image-tiles.html'
+  }
+}]);
+
+app.directive('navSubMain', ['loremIpsum', 'randomNumber', function(loremIpsum, randomNumber){
+  return{
+    restrict: 'E',
+    scope:{},
+    link: function(scope, element, attrs){
+
+    },
+    templateUrl: 'templates/navigation/nav-sub-main.html'
+  }
 }]);

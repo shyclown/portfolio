@@ -18,77 +18,28 @@
   <script src="app.js"></script>
   <script src="directive/bootstrap.js"></script>
   <script src="directive/jumbotronMain.js"></script>
+  <script src="directive/parts/specificCards.js"></script>
   <script src="chatmixer.js"></script>
 
   <!-- Google Font -->
+
 </head>
 
 <body>
-
+<style>
+  /* Generate background or color of main jumbotron */
+ .jumbotron{ background-color: blue; color: white; background-image: url('asset/trees/big/2.png');}
+</style>
 
 <div ng-app="app" ng-controller="loremController">
 <bootstrap-page></bootstrap-page>
-<style>
-  /* Generate background or color of main jumbotron */
- .jumbotron.main{ background-color: blue; color: white; background-image: url('asset/trees/big/2.png');}
-</style>
-<!-- Jumbotron Top -->
-
-<div class="jumbotron mt-4 main">
-    <div class="container text-center">
-      <h1>{{lorem(8,1)}}</h1>
-      <p class="lead">{{lorem(20,3)}}</p>
-
-
-    </div>
 </div>
 
 
 
-<div class="container">
-  <h1>{{lorem(6)}}</h1>
-  <p class="lead">{{lorem(20)}}</p>
-  <p>{{lorem(40)}}</p>
-  <p>{{lorem(120)}}</p>
-
-<div class="row">
-  <div class="col-sm-4">
-    <div class="card">
-      <div class="card-header">{{lorem(4, 2)}}</div>
-      <div class="card-block">{{lorem(16, 2)}}</div>
-    </div>
-  </div>
-  <div class="col-sm-4">
-    <div class="card">
-      <div class="card-header">{{lorem(4, 3)}}</div>
-      <div class="card-block">{{lorem(16, 3)}}</div>
-    </div>
-  </div>
-  <div class="col-sm-4">
-    <div class="card">
-      <div class="card-header">{{lorem(4, 4)}}</div>
-      <div class="card-block">{{lorem(16, 4)}}</div>
-    </div>
-  </div>
-</div>
-
-
-
-</div>
-<div class="jumbotron mt-4">
-  <div class="container text-center">
-    <h1>{{lorem(8,2)}}</h1>
-    <p class="lead">{{lorem(20)}}</p>
-    <div class="row justify-content-center">
-      <div class="col-sm-6">
-        <p>{{lorem(40)}}</p>
-      </div>
-    </div>
-
-  </div>
-</div>
-
-
-
-</div>
-<?php require 'footer.html'; ?>
+<!-- jQuery first, then Tether, then Bootstrap JS. -->
+<script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+</body>
+</html>
