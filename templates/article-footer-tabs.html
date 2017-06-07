@@ -1,0 +1,25 @@
+<!-- Nav Tabs -->
+<ul class="nav nav-tabs" role="tablist" >
+  <li class="nav-item" ng-repeat="tab in tabs track by $index">
+    <a class="nav-link" ng-class="$first ? 'active':''" data-toggle="tab" href="#{{tab.id}}" role="tab" >{{tab.name}}</a>
+  </li>
+</ul>
+<!-- Nav Tabs Panels -->
+<!--
+  There can be more types of tabs
+  Links, Author, Comment, Text, Properties
+-->
+<div class="tab-content">
+  <div class="tab-pane" ng-class="$first ? 'active':''" ng-repeat="tab in tabs track by $index" id="{{tab.id}}" role="tabpanel">
+    <!-- Links -->
+    <links-pane></links-pane>
+    <!-- Author -->
+    <author-pane></author-pane>
+    <!-- Comment -->
+    <media-comment></media-comment>
+    <!-- Text -->
+    <text-pane></text-pane>
+    <!-- Properties -->
+    <properties-pane></properties-pane>
+  </div>
+</div>

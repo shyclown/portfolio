@@ -1,0 +1,45 @@
+<div class="row">
+  <div class="col-md-2 col-sm-6" ng-repeat="tab in tabs track by $index" ng-init ="seed=random(2,7)">
+    <ul class="ul-strip">
+      <li><strong>{{word(2, $index)}}</strong></li>
+      <li  ng-repeat="item in getNr(seed) track by $index" >
+        <a href="" ng-init ="seed=random(55,155)">{{word(2,seed)}}</a>
+      </li>
+    </ul>
+  </div>
+
+  <div class="col-md-4">
+    <!-- Subscribe Form-->
+    <div><strong>Get News</strong></div>
+
+    <form class="form-inline">
+
+      <div class="my-flex-row">
+        <input type="text" class="form-control flex-grow-1" id="formGroupExampleInput" placeholder="Example input">
+        <button type="submit" class="btn btn-primary">Sign up</button>
+      </div>
+      <div class="form-check">
+        <label class="form-check-label">
+          <p>
+            <input type="checkbox" class="form-check-input">
+            I agree to the ShyClown Privacy Policy and the processing and use of my information
+          </p>
+        </label>
+      </div>
+    </form>
+    <!-- end-Subscribe Form -->
+    <div><strong>Language</strong></div>
+    <div class="row align-items-start">
+      <div class="col-4">
+        <div><a href="">English</a></div>
+        <div><a href="">German</a></div>
+      </div>
+      <div class="col-4">
+        <div><a href="">Slovak</a></div>
+        <div><a href="">Spanish</a></div>
+      </div>
+    </div>
+
+  </div>
+
+</div>

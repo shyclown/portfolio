@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>Bootstrap 101 Template</title>
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700&amp;subset=latin-ext" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900&amp;subset=latin-ext" rel="stylesheet">
+  </head>
+  <style>
+  html, body{ font-family: 'Open Sans', sans-serif; font-weight: 400; background-color: #EEE;}
+  #mainJumbotron{ background-color: #F9A825 !important; }
+  #footerJumbotron{ background-color: #333 !important; color:#FFF; }
+  #subscribeCard{
+    background-color: white;
+    margin-bottom: 1rem;
+    margin-top: 1rem;
+  }
+  #imagesCard{
+    background-color: white;
+    margin-bottom: 2rem;
+  }
+  bg-gray{ background-color: #EEE !important; }
+  bg-white{ background-color: white !important; }
+  bg-accent{ background-color: #666 !important; }
+  h1, h2, h3, h4, h5{ font-family: 'Roboto', sans-serif; font-weight: 500; }
+  p{ font-family: 'Roboto', sans-serif; font-weight: 300;}
+  .myclr{ background-color: #EEE; color: #000;}
+  .modal.in {   -webkit-transform: translateZ(0);  transform: translateZ(0); }
+  .topHeader{  font-family: 'Roboto', sans-serif; font-weight: 100; font-size: 4rem; }
+  pre{
+    box-sizing: border-box;
+    max-width: 100%;
+    padding: 0px;
+  }
+  code{
+    box-sizing: border-box;
+    max-width: 100%;
+    padding: 0px;
+    background-color: #EEE;
+  }
+  </style>
+  <body>
+
+  <header class="navbar navbar-light navbar-toggleable-md bd-navbar">
+    <nav class="container">
+      <div class="d-flex justify-content-between hidden-lg-up">
+        <a class="navbar-brand" href="/">
+          Shyclown
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#bd-main-nav" aria-controls="bd-main-nav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      </div>
+
+      <div class="collapse navbar-collapse" id="bd-main-nav">
+        <ul class="nav navbar-nav mr-auto">
+          <li class="nav-item active">
+            <a class="nav-item nav-link " href="index.php">Shyclown</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-item nav-link" href="">BruteSQL</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-item nav-link" href="">LucaCMS</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-item nav-link" href="">SeamFREE</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-item nav-link" href="">About</a>
+          </li>
+        </ul>
+
+        <div class="col-lg-4">
+          <div class="input-group">
+            <input type="text" class="form-control" placeholder="Search for...">
+            <span class="input-group-btn">
+              <button class="btn btn-secondary" type="button">Go!</button>
+            </span>
+          </div>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+
+    <div id="mainJumbotron"  class="jumbotron">
+      <div class="container">
+        <div class="row">
+        <img src="asset/brute.png" width="100px" height="100px" class="mr-4">
+        <div>
+        <h1 class="topHeader">brute<strong>mysql</strong>.php</h1>
+        <p class="lead">Careless storing of data for prototyping.</p>
+      </div>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="container ">
+
+      <div class="alert alert-success" role="alert">
+        <strong>Well done!</strong> You successfully found this great site. ;) if you wish to another page click <a href="blog.php">here</a>
+      </div>
+      <div class="row">
+        <div class="col-sm-6">
+          <h5>First steps</h5>
+          <p class="text-muted">Copy <code class="p-0 m-0">brutesql.php</code> file to your project folder and open file on your localhost.
+            <br><code class="p-0 m-0">localhost/your_project/brutesql.php</code><br>You get prompted with form to set the database details. After you correctly fill in the fields in form click save for connection. BruteSQL will create new file called <code>brute_define.php</code>.</p>
+          <p><a class="btn btn-secondary" href="#" role="button">View details &raquo;</a></p>
+        </div>
+        <div class="col-sm-6">
+          <h5>Inserting Data</h5>
+          <p class="text-muted">When inserting data we set insert property to target table, all other properties will be inserted to this table, and if properties do not match with existing columns, new column is created and old rows are updated with value NULL.<br>
+          <code>let data = { insert: users, name: name, email: email }</code></p>
+          <a class="btn btn-secondary" href="#" role="button">View details &raquo;</a></p>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-sm-6">
+          <h5>Create Table</h5>
+          <p class="text-muted">We can create table ourselves by sending object containing property create.
+            <br><code class="p-0 m-0">let data = { create: users };</code><br>
+            Other option is just to use property insert which forces creation of table automatically if table does not exist.<br><code class="p-0 m-0">let data = { insert: users };</code></p>
+          <p><a class="btn btn-secondary" href="#" role="button">View details &raquo;</a></p>
+        </div>
+        <div class="col-sm-6">
+          <h5>Inserting Data</h5>
+          <p class="text-muted">When inserting data, we set 'insert property' to 'target table', all other properties will be inserted to this table, and if properties do not match with existing columns, new column is created and other rows are updated with value NULL.<br>
+          <code>let data = { insert: users, name: name, email: email }</code></p>
+          <a class="btn btn-secondary" href="#" role="button">View details &raquo;</a></p>
+        </div>
+      </div>
+
+      <div id="subscribeCard" class="row align-items-center bg-white">
+        <div class="col-sm-6 p-5 bg-white">
+          <img class="card-img-top img-fluid" src="asset/2.jpg" alt="Card image cap"/>
+        </div>
+        <div class="col-sm-6 p-5">
+          <h5 class="">Subscribe</h5>
+          <p class="text-muted">Since this web page is in state of development you can receive message when it will be fully running by subscribing to us.</p>
+          <a class="btn btn-secondary" href="#" role="button">View details &raquo;</a></p>
+        </div>
+      </div>
+
+      <div id="imagesCard" class="row align-items-center">
+
+        <div class="col-sm-6 p-5">
+          <h5>Check Images</h5>
+          <p class="text-muted">Since this web page is in state of development you can receive message when it will be fully running by subscribing to us.</p>
+          <a class="btn btn-secondary" href="#" role="button">View details &raquo;</a></p>
+        </div>
+
+        <div class="col-sm-6 p-5">
+          <img class="card-img-top img-fluid" src="asset/4.jpg" alt="Card image cap"/>
+        </div>
+      </div>
+
+      <div class="row">
+
+        <div class="col-lg-4 col-md-6 p-2">
+          <div class="card">
+            <img class="card-img-top img-fluid" src="asset/6.jpg" alt="Card image cap">
+            <div class="card-block">
+              <h5>Seamless</h5>
+              <p>Ready to use seamless textures made from provided pictures</p>
+              <a href="#" class="btn btn-primary">Browse</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6 p-2">
+          <div class="card">
+            <img class="card-img-top img-fluid" src="asset/5.jpg" alt="Card image cap">
+            <div class="card-block">
+              <h5>Textures</h5>
+              <p>Here you can find textures some textures I made from photos I have</p>
+              <a href="#" class="btn btn-primary">Browse</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6 p-2">
+          <div class="card">
+            <img class="card-img-top img-fluid" src="asset/1.jpg" alt="Card image cap">
+            <div class="card-block">
+              <h5>Photos</h5>
+              <p>Here you can find some hight resolution images from which you can extract texture</p>
+              <a href="#" class="btn btn-primary">Browse</a>
+            </div>
+            <div class="card-footer">
+              <small class="text-muted">If you create texture from provided pictures please upload it to this page</small>
+            </div>
+          </div>
+        </div>
+
+
+
+      </div>
+
+    </div>
+
+    <div id="footerJumbotron"  class="jumbotron mt-4">
+      <div class="container text-center">
+        <div class=" lead mb-4">You’ve gotta dance like there’s nobody watching.</div>
+        <button type="button" class="btn btn-primary" name="button">Subscribe for more!</button>
+      </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+  </body>
+</html>

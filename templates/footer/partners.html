@@ -1,0 +1,4 @@
+<div><strong>Partners</strong></div>
+<div class="row" ng-repeat="row in getNr(1)" ng-init="partners=random(3,10)">
+<div class="col" ng-repeat="partner in getNr(partners) track by $index" ng-init="seed=random(999,1111)"> {{word(1,seed)}} </div>
+</div>

@@ -1,0 +1,72 @@
+body{  font-family: 'Roboto'; }
+* {
+  -webkit-border-radius: 0 !important;
+     -moz-border-radius: 0 !important;
+          border-radius: 0 !important;
+}
+.shadow{
+  -webkit-box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.55);
+  -moz-box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.55);
+  box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.55);
+}
+.max-scroll{  overflow-y: scroll;  max-height: 250px;}
+h1{ cursive !important; }
+.nopadding {  padding: 0 !important;  margin: 0 !important;}
+.cust-card{  transition: box-shadow 0.4s;
+  transition: background-color 0.4s;
+  background-color: rgba(255,255,255,0.9); }
+.cust-card:hover{
+  cursor: pointer;
+  border: 1px solid #FFF;
+  -webkit-box-shadow: 0px 0px 15px 0px rgba(0,0,0,0.65);
+  -moz-box-shadow: 0px 0px 15px 0px rgba(0,0,0,0.65);
+  box-shadow: 0px 0px 15px 0px rgba(0,0,0,0.65);
+  background-color: rgba(255,255,255,1);
+}
+.bdr-gray{ border: 1px solid #E0E0E0;}
+.bdr-1{ border: 1px solid #003c96; }
+.image-bg{
+  background-image: url("../asset/1.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+}
+.bg-img1{  background-image: url("../asset/1.jpg");}
+.bg-img2{  background-image: url("../asset/2.jpg");}
+.bg-img3{  background-image: url("../asset/3.jpg");}
+.bg-img4{  background-image: url("../asset/4.jpg");}
+.bg-img5{  background-image: url("../asset/5.jpg");}
+.bg-img6{  background-image: url("../asset/6.jpg");}
+.clr-blue{ color: #0d47a1 !important; }
+.bg-clr-blue{ background-color: #0d47a1 !important; }
+.clr-white{ color: white !important; }
+.clr-1{ color: #336fc9 !important; }
+.bg-col1{ background-color: #336fc9 !important; }
+.clr-2{ color: #EAEAEA !important; }
+.bg-col2{
+  background-image: url("../asset/bg.png");
+  background-repeat: repeat;
+  background-color: #EAEAEA !important;
+}
+#pageHeader{
+  background-color: rgba(0, 0, 0, 0.4);
+  padding: 1rem;
+  color: white;
+  font-family: Roboto,"Helvetica Neue",Arial,sans-serif;
+}
+.trans-white{
+background-color: rgba(255,255,255,0.2);
+}
+#jumbotronCardsTop{
+  color: white;
+  background-color: #D84315 !important;
+  margin: 0 0;
+}
+#jumbotronSellText{
+  height: 350px;
+  display: flex;
+  align-items: center;
+
+  background-color: #333;
+  color: #BDBDBD;
+}

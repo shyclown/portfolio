@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+
+  <title>The HTML5</title>
+  <meta name="description" content="The HTML5 Herald">
+  <meta name="author" content="SitePoint">
+  <link rel="stylesheet" href="css/font-awesome.min.css">
+  <link rel="stylesheet" href="css/squares.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+  <!--[if lt IE 9]>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script>
+  <![endif]-->
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular-route.min.js"></script>
+  <script>
+  const app = angular.module('app',[]);
+
+  app.service('loremIpsum', function($http){
+
+    let loremIpsumTxt = "";
+    let arrayIpsum = [];
+    let storage = []; // avoid digest error
+
+    let error = [];
+
+    // request
+    const getLoremIpsum = function(){
+      $http({
+        method: 'GET',
+        url: 'loremipsum.txt'
+      }).then(
+        function(res){
+          loremIpsumTxt = res.data; // txt
+          arrayIpsum = loremIpsumTxt.split(' ');
+        },
+        function(res){ error.push(res); });
+    };
+    // run request
+    getLoremIpsum();
+
+    // randomization
+    function getRandomArbitrary(min, max) { return Math.floor(Math.random() * (max - min)) + min; }
+
+    this.getSize = function(size, seed = 1)
+    {
+      let pos = size*seed;
+      if(storage[pos]){
+        return storage[pos];
+      }
+      else{
+        let arrSize = arrayIpsum.length;
+        let maxPick = arrSize - size;
+        let startpoint = getRandomArbitrary( 0 , maxPick );
+        let endpoint = startpoint + size;
+        let smallLorem = arrayIpsum.slice( startpoint, endpoint );
+        let str = smallLorem.toString();
+        let str_0 = str.replace(/,,/g, "--"); // preserve dash
+        let str_1 = str_0.replace(/,/g, " ");
+        str = str_1.replace(/--/g, ", ");
+        str = str.charAt(0).toUpperCase() + str.slice(1) + "."; // upperCase
+        if(str != "."){ storage[pos] = str; }
+        return str;
+      }
+    }
+  });
+
+  app.controller('loremController', function($scope, $http, loremIpsum){
+
+    $scope.lorem = function(size, seed){
+      return loremIpsum.getSize(size, seed);
+    };
+
+  });</script>
+
+
+  <!-- Google Font -->
+</head>
+
+<body>
+
+<div ng-app="app" ng-controller="loremController">
+
+<div class="container">
+  <h1>{{lorem(6)}}</h1>
+  <p class="lead">{{lorem(20)}}</p>
+  <p>{{lorem(40)}}</p>
+  <p>{{lorem(120)}}</p>
+
+<div class="row">
+  <div class="col-sm-4">
+    <div class="card">
+      <div class="card-header">{{lorem(4, 2)}}</div>
+      <div class="card-block">{{lorem(16, 2)}}</div>
+    </div>
+  </div>
+  <div class="col-sm-4">
+    <div class="card">
+      <div class="card-header">{{lorem(4, 3)}}</div>
+      <div class="card-block">{{lorem(16, 3)}}</div>
+    </div>
+  </div>
+  <div class="col-sm-4">
+    <div class="card">
+      <div class="card-header">{{lorem(4, 4)}}</div>
+      <div class="card-block">{{lorem(16, 4)}}</div>
+    </div>
+  </div>
+</div>
+
+
+
+</div>
+<div class="jumbotron mt-4">
+  <div class="container text-center">
+    <h1>{{lorem(8,2)}}</h1>
+    <p class="lead">{{lorem(20)}}</p>
+    <div class="row justify-content-center">
+      <div class="col-sm-6">
+        <p>{{lorem(40)}}</p>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+
+
+</div>
+
+
+<!-- jQuery first, then Tether, then Bootstrap JS. -->
+<script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+</body>
+</html>

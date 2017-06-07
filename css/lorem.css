@@ -1,0 +1,52 @@
+.my-flex-row{
+  display: flex;
+  width: 100%;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+.f-wrap{
+  flex-wrap: wrap;
+}
+.flex-grow-0{ flex-grow: 0;}
+.flex-grow-1{ flex-grow: 1;}
+.flex-grow-2{ flex-grow: 2;}
+.flex-grow-3{ flex-grow: 3;}
+.flex-grow-4{ flex-grow: 4;}
+
+.f-basis-1{ flex-basis: 1rem; }
+.f-basis-2{ flex-basis: 2rem; }
+.f-basis-3{ flex-basis: 3rem; }
+.f-basis-4{ flex-basis: 4rem; }
+
+.ul-strip{
+  list-style: none;
+  padding: 0px;
+}
+
+.bd-1{
+  border: 1px solid #EAEAEA !important;
+}
+
+i.awe-checkers-black{
+  background-color: #000;
+  font-size: 2.5rem;
+  padding: 1rem 0rem;
+  text-align: center;
+  line-height: 2.5rem;
+  height: 4.5rem;
+  width: 4.5rem;
+  margin-bottom: 1rem;
+
+  border-radius: 5rem;
+  color: #FFF;
+}
+.unity-checkers{
+  border: 1px solid #EAEAEA !important;
+  padding: 17px !important;
+}
+.unity-checkers:hover{
+  border: 2px solid #000!important;
+  padding: 16px !important;
+  cursor: pointer !important;
+}

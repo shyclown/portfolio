@@ -1,0 +1,12 @@
+
+<div class="row">
+  <div ng-class="width()" ng-repeat="card in cards track by $index">
+    <div class="card">
+      <div class="card-header" ng-init="cname = random(4,6)" ng-bind="lorem(cname, $index)"></div>
+      <div class="card-block">
+        <h3 ng-init="header = random(5,10)">{{lorem(header,$index)}}</h3>
+        <p ng-init="p = random(18,45)">{{lorem(p, $index)}}</p>
+      </div>
+    </div>
+  </div>
+</div>

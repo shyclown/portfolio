@@ -1,0 +1,51 @@
+* {
+  -webkit-border-radius: 0 !important;
+     -moz-border-radius: 0 !important;
+          border-radius: 0 !important;
+}
+.bg-clr-1{ background-color: #333 !important; }
+
+.brdr-gray-b{
+  border-bottom: 1px solid #999;
+}
+.clr-1{ color: #333 !important; }
+.clr-gray{ color: #999; }
+.bg-clr-gray{ background-color: #EAEAEA !important; }
+.clr-white{ color: #FFF !important; }
+.card h3{
+  font-size: 1.2rem;
+
+}
+.card{
+  cursor: pointer;
+  transition: box-shadow 0.4s ;
+}
+.card:hover{
+  border-color: #999999;
+  -webkit-box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.55);
+  -moz-box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.55);
+  box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.55);
+}
+.card p{
+  font-size: 0.9rem;
+
+}
+.custom-ul{ list-style: none; margin: 0; padding: 0;}
+.custom-ul > li{ line-style: none; border-bottom:solid 1px #444; padding: 8px 0px; }
+.clear-marg{
+  margin: 0 0 !important;
+}
+.price{
+  text-align: right !important;
+}
+.card img{
+  width: 100% !important;
+}
+.card-columns {
+  @include media-breakpoint-only(lg) {
+    column-count: 4;
+  }
+  @include media-breakpoint-only(xl) {
+    column-count: 5;
+  }
+}

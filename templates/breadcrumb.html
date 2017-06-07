@@ -1,0 +1,6 @@
+<ol class="breadcrumb">
+  <li class="breadcrumb-item active" ng-class="$last? 'active' : ''"ng-repeat="link in links track by $index">
+    <a href="#" ng-if='!$last'>{{word( 1, $index)}}</a>
+    <span ng-if="$last">{{word( 1, $index)}}</span>
+  </li>
+</ol>

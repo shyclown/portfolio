@@ -1,0 +1,11 @@
+<!-- Checkers - Tight pairs of cards without gaps -->
+<!-- Inspired from Unity page -->
+
+<div class="row">
+<div class="col-sm-12 col-md-6 col-lg-4 text-center unity-checkers" ng-repeat="panel in getNr(6) track by $index">
+  <i class="awe-checkers-black fa" ng-init="icon = random(0, icons.length)" ng-class="pickIcon(icon)"></i>
+  <h4>{{word(2,$index)}}</h4>
+  <p class="lead">{{word(3,$index)}}</p>
+  <button class="btn">Learn more</button>
+</div>
+</div>

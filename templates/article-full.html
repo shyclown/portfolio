@@ -1,0 +1,5 @@
+<article>
+<h1>{{lorem(headersize, seed)}}</h1>
+<p class="lead">{{lorem(leadsize, seed)}}</p>
+<p ng-repeat="p in paragraphs track by $index " ng-init="len=random(min,max)">{{lorem(len, $index)}}</p>
+</article>
