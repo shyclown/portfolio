@@ -1,17 +1,35 @@
-app.directive('specificCardOne', ['loremIpsum', 'randomNumber', function(loremIpsum, randomNumber){
+app.directive('specificCardMidOne', ['loremIpsum', 'randomNumber', function(loremIpsum, randomNumber){
   return{
     restrict: 'E',
-    scope:{},
-    link: function(scope, element, attrs){
-      scope.word = loremIpsum.word;
-      scope.random = randomNumber.get;
-      scope.getNr = function(nr){return new Array(nr);};
-    },
-    templateUrl: 'templates/cards/specific-card-one.html'
+    scope: false,
+    templateUrl: 'templates/cards/single/specific-card-mid-one.html'
+  }
+}]);
+app.directive('specificCardMidTwo', ['loremIpsum', 'randomNumber', function(loremIpsum, randomNumber){
+  return{
+    restrict: 'E',
+    scope: false,
+    templateUrl: 'templates/cards/single/specific-card-mid-two.html'
+  }
+}]);
+app.directive('specificCardMini', ['loremIpsum', 'randomNumber', function(loremIpsum, randomNumber){
+  return{
+    restrict: 'E',
+    scope: false,
+    templateUrl: 'templates/cards/single/specific-card-mini.html'
+  }
+}]);
+app.directive('specificCardMidThree', ['loremIpsum', 'randomNumber', function(loremIpsum, randomNumber){
+  return{
+    restrict: 'E',
+    scope: false,
+    templateUrl: 'templates/cards/single/specific-card-mid-three.html'
   }
 }]);
 
-app.directive('specificCardTwo', ['loremIpsum', 'randomNumber', function(loremIpsum, randomNumber){
+
+
+app.directive('specificCardPanelOne', ['loremIpsum', 'randomNumber', function(loremIpsum, randomNumber){
   return{
     restrict: 'E',
     scope:{},
@@ -20,11 +38,11 @@ app.directive('specificCardTwo', ['loremIpsum', 'randomNumber', function(loremIp
       scope.random = randomNumber.get;
       scope.getNr = function(nr){return new Array(nr);};
     },
-    templateUrl: 'templates/cards/specific-card-two.html'
+    templateUrl: 'templates/cards/specific-card-panel-one.html'
   }
 }]);
 
-app.directive('specificCardThree', ['loremIpsum', 'randomNumber', function(loremIpsum, randomNumber){
+app.directive('specificCardPanelTwo', ['loremIpsum', 'randomNumber', function(loremIpsum, randomNumber){
   return{
     restrict: 'E',
     scope:{},
@@ -33,6 +51,19 @@ app.directive('specificCardThree', ['loremIpsum', 'randomNumber', function(lorem
       scope.random = randomNumber.get;
       scope.getNr = function(nr){return new Array(nr);};
     },
-    templateUrl: 'templates/cards/specific-card-three.html'
+    templateUrl: 'templates/cards/specific-card-panel-two.html'
+  }
+}]);
+
+app.directive('specificCardPanelThree', ['loremIpsum', 'randomNumber', function(loremIpsum, randomNumber){
+  return{
+    restrict: 'E',
+    scope:{},
+    link: function(scope, element, attrs){
+      scope.word = loremIpsum.word;
+      scope.random = randomNumber.get;
+      scope.getNr = function(nr){return new Array(nr);};
+    },
+    templateUrl: 'templates/cards/specific-card-panel-three.html'
   }
 }]);

@@ -19,6 +19,7 @@
   <script src="directive/bootstrap.js"></script>
   <script src="directive/jumbotronMain.js"></script>
   <script src="directive/parts/specificCards.js"></script>
+    <script src="directive/parts/shopSearchBig.js"></script>
   <script src="chatmixer.js"></script>
 
   <!-- Google Font -->

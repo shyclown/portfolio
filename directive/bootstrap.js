@@ -25,13 +25,13 @@ app.directive('bootstrapPage', ['loremIpsum', 'randomNumber', function(loremIpsu
   // header
 
   test += '<jumbotron-main lorem=lorem bs-toggle='+true+'></jumbotron-main>';
-
+  test += '<shop-search-big></shop-search-big>';
   // create cards row as seen on ryanair
-  test += '<specific-card-one></specific-card-one>';
+  test += '<specific-card-panel-one></specific-card-panel-one>';
   // 1t + 2span + 1simple
-  test += '<specific-card-two></specific-card-two>';
+  test += '<specific-card-panel-two></specific-card-panel-two>';
     // 1text + 3 simple
-  test += '<specific-card-three></specific-card-three>';
+  test += '<specific-card-panel-three></specific-card-panel-three>';
 
 
   test += '<checkers></checkers>';
