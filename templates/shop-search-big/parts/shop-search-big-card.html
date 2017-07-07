@@ -1,7 +1,12 @@
-<li class="media">
-  <img class="d-flex mr-3" src="..." alt="Generic placeholder image">
-  <div class="media-body">
-    <h5 class="mt-0 mb-1">List-based media object</h5>
-    Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.
-  </div>
+<!-- Big card search result imitation -->
+
+<!-- Version without price tag -->
+<li ng-repeat="card in getNr(4) track by $index" class="media bd-b-1 mb-3 pb-3" ng-init="seed = 555 + $index; header = random(3,5); text = random(16,32)">
+    <img class="img-fluid mr-3" src="asset/200x200.svg" alt="Generic placeholder image">
+    <div class="media-body">
+      <h5 class="mt-0 mb-1">{{word(header,seed)}}</h5>
+      {{lorem(text, seed)}}
+    </div>
 </li>
+
+<!-- Version with price tag -->

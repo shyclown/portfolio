@@ -65,6 +65,15 @@
 .bd-1{
   border: 1px solid #EAEAEA !important;
 }
+.bd-b-1{ border-bottom: 1px solid #EAEAEA !important;}
+
+.xm-b-1{ margin-bottom: -1rem; }
+/* reset margin bottom */
+.reset-b{
+  margin-bottom: 0px;
+  padding-bottom: 0px;
+}
+
 
 i.awe-checkers-black{
   background-color: #000;
@@ -92,7 +101,9 @@ i.awe-checkers-black{
   padding: 0px !important;
 }
 
-
+.color-1{
+  background-color: #E0E0E0;
+}
 
 
 

@@ -1,33 +1,33 @@
-<form>
-  <div class="row">
+<!-- Search filter form -->
+<form class=" container color-1">
+  <div class="row bd-b-1 mb-3 pb-3 pt-3">
     <div class="col-3">
       <strong>Search</strong>
     </div>
     <div class="col-9">
-      <div class="form-group">
+      <div>
         <input type="textarea" class="form-control" id="exampleInputEmail1" aria-describedby="searchfield" placeholder="Search something">
       </div>
     </div>
   </div>
 
-<div class="row">
+<div class="row bd-b-1 mb-3 pb-3">
   <div class="col-3">
     <strong>Some Textarea</strong>
   </div>
   <div class="col-9">
-    <div class="form-group">
-      <label for="exampleTextarea">Example textarea</label>
+    <div>
       <textarea class="form-control" id="exampleTextarea" rows="3"></textarea>
     </div>
   </div>
 </div>
 
-<div class="row">
+<div class="row bd-b-1 mb-3 pb-2">
   <div class="col-3">
     <strong>Input</strong>
   </div>
   <div class="col-3">
-    <div class="form-check">
+    <div>
       <label class="form-check-label">
         <input type="checkbox" class="form-check-input">
         Check me out
@@ -51,19 +51,63 @@
     </div>
   </div>
 </div>
-
-  <div class="form-group">
-    <label for="exampleSelect1">Example select</label>
-    <select class="form-control" id="exampleSelect1">
-      <option>1</option>
-      <option>2</option>
-      <option>3</option>
-      <option>4</option>
-      <option>5</option>
-    </select>
+<div class="collapse" id="moreOptions">
+  <div class="row bd-b-1 mb-3 pb-3">
+    <div class="col-3">
+      <strong>Search</strong>
+    </div>
+    <div class="col-9">
+      <div>
+        <input type="textarea" class="form-control" id="exampleInputEmail1" aria-describedby="searchfield" placeholder="Search something">
+      </div>
+    </div>
   </div>
 
-
-
-  <button type="submit" class="btn btn-primary">Submit</button>
+<div class="row bd-b-1 mb-3 pb-3">
+  <div class="col-3">
+    <strong>Some Textarea</strong>
+  </div>
+  <div class="col-9">
+    <div>
+      <textarea class="form-control" id="exampleTextarea" rows="3"></textarea>
+    </div>
+  </div>
+</div>
+</div>
 </form>
+
+<!-- Control of search results -->
+<div class="d-flex flex-row justify-content-between pb-4">
+  <div>
+    <button class="btn btn-primary" type="button" name="button" data-toggle="collapse" data-target="#moreOptions">More Options</button>
+    <button class="btn btn-primary" type="button" name="button">Clear Filter</button>
+  </div>
+
+<!-- Paginator -->
+  <div>
+    <div class="d-flex flex-row justify-content-between align-items-center">
+
+      <form class="form-inline pr-1">
+        <div class="form-group">
+          <label class="mr-2" for="exampleSelect1">Per Page</label>
+          <select class="form-control" id="exampleSelect1">
+            <option>10</option>
+            <option>20</option>
+            <option>30</option>
+            <option>40</option>
+            <option>50</option>
+          </select>
+        </div>
+      </form>
+
+      <nav aria-label="Page navigation example">
+        <ul class="pagination mb-0">
+          <li class="page-item"><a class="page-link" href="#">Previous</a></li>
+          <li class="page-item"><a class="page-link" href="#">1</a></li>
+          <li class="page-item"><a class="page-link" href="#">2</a></li>
+          <li class="page-item"><a class="page-link" href="#">3</a></li>
+          <li class="page-item"><a class="page-link" href="#">Next</a></li>
+        </ul>
+      </nav>
+  </div>
+</div>

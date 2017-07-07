@@ -9,6 +9,9 @@ app.directive('shopSearchBigCards', ['loremIpsum', 'randomNumber', function(lore
   return{
     restrict: 'E',
     scope: false,
+    link: function(scope, element, attrs){
+
+    },
     templateUrl: 'templates/shop-search-big/parts/shop-search-big-cards.html'
   }
 }]);
@@ -44,6 +47,7 @@ app.directive('shopSearchBig', ['loremIpsum', 'randomNumber', function(loremIpsu
     link: function(scope, element, attrs){
       scope.word = loremIpsum.word;
       scope.random = randomNumber.get;
+      scope.lorem = loremIpsum.getSize;
       scope.getNr = function(nr){return new Array(nr);};
     },
     templateUrl: 'templates/shop-search-big/shop-search-big.html'

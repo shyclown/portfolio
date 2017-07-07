@@ -25,6 +25,9 @@ h1{ cursive !important; }
 }
 .bdr-gray{ border: 1px solid #E0E0E0;}
 .bdr-1{ border: 1px solid #003c96; }
+
+.br-b-1{ border-bottom: 1px solid #003c96; }
+
 .image-bg{
   background-image: url("../asset/1.jpg");
   background-size: cover;
